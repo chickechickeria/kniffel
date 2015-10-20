@@ -1,14 +1,32 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="style.css">
+    
+    <link type="text/css" rel="stylesheet" media="screen" href="style.css" />
+  
 <title>Kniffel</title>
-</head>
-<body>
-<h1>Kniffel</h1>
-    <img src="/bilder/kniffel.png" height="200px" width="300px" alt="kniffel" title = "Kniffel="0">
-                                                   <input type="button" value="Neues Spiel" onclick= "location.href='einstellungen.html'" />
-                                                <input type="button" value="Spiel fortsetzen" onclick= "location.href='spiel.html'" />
-                                                <input type="button" value="Anleitung" onclick= "location.href='anleitung.html'" />                                                                     
-</body>
+    
+    <!--damit mobile Anwendungen das öffnen können
+    <meta name="viewport" content="width=device-width" />-->
+    
+    <h1>Kniffel</h1>
+    
+  </head> 
+    
+    <body>
+
+
+    
+        <!--<img class ="pic" src="/bilder/kniffel.png" height="200px" width="300px" border="5px"  alt="kniffel">-->
+        
+   
+        <div class="y"> <img src="/bilder/kniffel.png" height="200px" width="300px" border="5px" alt="kniffel"/></div>
+
+    </body> 
+                    <menu type="toolbar">
+<button type="button" onclick="location.href='einstellungen.html'">Neues Spiel</button>
+<button type="button" onclick="location.href='spiel.html'">Spiel fortsetzen</button>
+<button type="button" onclick="location.href='anleitung.html'">Anleitung</button>
+</menu>
+
 </html>
