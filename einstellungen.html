@@ -2,6 +2,9 @@
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="style.css">
+   <link rel="text/javascript" href="einstellungen.js">
+
+    
 <title>Einstellungen</title>
     <h1>Kniffel</h1>
     
@@ -12,19 +15,35 @@
     <div><label>Spieleranzahl:</label>
     <!--html5 combobox-->
 
-    <input type=text list=browsers >
-<datalist id=browsers >
-   <option> 1
-   <option> 2
-       <option> 3
-           <option> 4
+    <input type="text" list=browsers onchange="setSpielername(this.value)">
+<datalist id="browsers" >
+    <option id="S1"> 1 </option>
+    <option id="S2"> 2 </option>
+    <option id="S3"> 3 </option>
+    <option id="S4"> 4 </option>
+    <option id="S5"> 5 </option>   
 </datalist></div>
     
-    <div><label>Geben Sie Ihre/n Namen ein.</label></div>
-    <div><label>Spieler 1:</label>
+    <br>
     
-    <input type="text" name="Spielername" value="Spieler 1"></div>
+    <div>
+    <label for="Spielername"> Geben Sie Ihre/n Namen ein:</label></div>
     
+    <div>
+        <label>Spieler 1: </label>
+        <input type="text" id="SN1" value="Spieler 1">      </div>
+    <div>
+        <label>Spieler 2: </label>
+        <input type="text" id="SN2" value="Spieler 2">      </div>
+    <div>
+        <label>Spieler 3: </label>
+        <input type="text" id="SN3" value="Spieler 3">      </div>
+    <div>
+        <label>Spieler 4: </label>
+        <input type="text" id="SN2" value="Spieler 4">      </div>
+    <div>
+        <label>Spieler 5: </label>
+        <input type="text" id="SN5" value="Spieler 5">      </div>
 
     <menu type="toolbar">
 <button type="button" onclick="location.href='spiel.html'">Spiel beginnen</button>
