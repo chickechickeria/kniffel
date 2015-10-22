@@ -16,7 +16,7 @@
   </head> 
     
     <body>
-<div id="start">
+<div id="start" style="display: block;">
 
     
         <!--<img class ="pic" src="/bilder/kniffel.png" height="200px" width="300px" border="5px"  alt="kniffel">-->
@@ -32,8 +32,44 @@
 </menu>
 </div>
         
-<div id="einstellungen">
+<div id="einstellungen" style="display: none;">
+    <div><label>Spieleranzahl:</label>
+    <!--html5 combobox-->
+
+    <input type="text" list=browsers onchange="setSpielername(this.value)">
+<datalist id="browsers" >
+    <option id="S1"> 1 </option>
+    <option id="S2"> 2 </option>
+    <option id="S3"> 3 </option>
+    <option id="S4"> 4 </option>
+    <option id="S5"> 5 </option>   
+</datalist></div>
     
+    <br>
+    
+    <div>
+    <label for="Spielername"> Geben Sie Ihre/n Namen ein:</label></div>
+    
+    <div id="s1" style="display: none;">
+        <label>Spieler 1: </label>
+        <input type="text" id="SN1" value="Spieler 1">      </div>
+    <div id="s2" style="display: none;">
+        <label>Spieler 2: </label>
+        <input type="text" id="SN2" value="Spieler 2">      </div>
+    <div id="s3" style="display: none;">
+        <label>Spieler 3: </label>
+        <input type="text" id="SN3" value="Spieler 3">      </div>
+    <div id="s4" style="display: none;">
+        <label>Spieler 4: </label>
+        <input type="text" id="SN2" value="Spieler 4">      </div>
+    <div id="s5" style="display: none;">
+        <label>Spieler 5: </label>
+        <input type="text" id="SN5" value="Spieler 5">      </div>
+
+    <menu type="toolbar">
+<button type="button" onclick="location.href='spiel.html'">Spiel beginnen</button>
+<button type="button" onclick="location.href='start.html'">Abbrechen</button>
+</menu>
 </div>
        
 <div id="spiel">
