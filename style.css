@@ -23,8 +23,7 @@ button2 {
     height: 5px;
     width: 40px;
     margin-left: 100px;
-    
-    
+    transition: all 0.3s ease 0s;
     border-radius: 10px;
 }
 
@@ -146,7 +145,6 @@ table {
     background: #e3e3e3;
 }
 td {
-    width: 112;
-    border: 1px solid ;
-    
+    width: 112px;
+    border: 1px solid ;    
 }
