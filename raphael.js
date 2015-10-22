@@ -1,19 +1,25 @@
-var SpielController = {
-    aktuellerSpieler,
-    wuerfel1 = new Wuerfel(1),
-    wuerfel2 = new Wuerfel(2),
-    wuerfel3 = new Wuerfel(3),
-    wuerfel4 = new Wuerfel(4),
-    wuerfel5 = new Wuerfel(5),
+function wuerfel (nummer) {
+    this.wuerfelNr = nummmer;
+    this.wert = 1;
+    this.aktiv = true
+}
+
+var SpielController = function() {
+    var aktuellerSpieler;
+    var wuerfel1 = new wuerfel(1);
+    var wuerfel2 = new wuerfel(2);
+    var wuerfel3 = new wuerfel(3);
+    var wuerfel4 = new wuerfel(4);
+    var wuerfel5 = new wuerfel(5);
     startenSpiel = function(){
         document.location = "einstellungen.html";
-    },
+    };
     spielPausieren = function(){
         document.location = "start.html";
-    },
+    };
     spielFortsetzen = function(){
         document.location = "spiel.html";
-    },
+    };
     festlegenSpielerAnzahl = function(anzahl){
         spielerAnzahl = anzahl;
         for(var i = 0; i< anzahl; i++){
@@ -33,14 +39,14 @@ var SpielController = {
               var spieler5 = new spieler("Spieler5",5)
               }
         }
-    },
+    };
     eingebenSpielerName = function(){
-        spieler1.name = document.getElementById("NameSpieler1");
-        spieler2.name = document.getElementById("NameSpieler2");
-        spieler3.name = document.getElementById("NameSpieler3");
-        spieler4.name = document.getElementById("NameSpieler4");
-        spieler5.name = document.getElementById("NameSpieler5");
-    }
+        spieler1.name = document.getElementById("NameSpieler1").value;
+        spieler2.name = document.getElementById("NameSpieler2").value;
+        spieler3.name = document.getElementById("NameSpieler3").value;
+        spieler4.name = document.getElementById("NameSpieler4").value;
+        spieler5.name = document.getElementById("NameSpieler5").value;
+    };
     auswählenSpieler = function(){
           if(aktuellerSpieler.SpielerNr === spielerAnzahl){
               aktuellerSpieler = spieler1;
@@ -58,10 +64,10 @@ var SpielController = {
                 aktuellerSpieler = spieler5;
               }
           }
-    },
+    };
     beginneZug = function(){
         aktuellerSpieler.offeneWuerfe = 3;
-    }
+    };
     wuerfel = function(){
         if(würfel1.aktiv){
             wuerfel1.berechneWerte;
@@ -78,10 +84,11 @@ var SpielController = {
         if(würfel5.aktiv){
             wuerfel5.berechneWerte;
         }
-    }
+    };
     beendenWurf = function(){
         aktuellerSpieler.offeneWuerfe = 0;
         
     }
 
 }
+
