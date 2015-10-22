@@ -13,8 +13,8 @@
     
   </head> 
     
-    <body>
-<div id="start" style="display: block;">
+    <body onload="init()">
+<div id="start" style="display: block">
 
     
         <!--<img class ="pic" src="/bilder/kniffel.png" height="200px" width="300px" border="5px"  alt="kniffel">-->
@@ -24,17 +24,17 @@
 
      
                     <menu type="toolbar">
-<button type="button" onclick="startenSpiel()">Neues Spiel</button>
-<button type="button" onclick="spielFortsetzen()">Spiel fortsetzen</button>
-<button type="button" onclick="location.href='anleitung.html'">Anleitung</button>
+<button type="button" onclick="SpielController.startenSpiel()">Neues Spiel</button>
+<button type="button" onclick="SpielController.spielFortsetzen()">Spiel fortsetzen</button>
+<button type="button" onclick="SpielController.oeffneAnleitung()">Anleitung</button>
 </menu>
 </div>
         
-<div id="einstellungen" style="display: none;">
+<div id="einstellungen" style="display: none">
     <div><label>Spieleranzahl:</label>
     <!--html5 combobox-->
 
-    <input type="text" list=browsers onchange="festlegenAnzahlSpieler(this.value)">
+    <input type="text" list=browsers onchange="SpielController.festlegenSpielerAnzahl(this.value)">
 <datalist id="browsers" >
     <option id="S1"> 1 </option>
     <option id="S2"> 2 </option>
@@ -45,10 +45,8 @@
     
     <br>
     
-    <div>
-    <label for="Spielername"> Geben Sie Ihre/n Namen ein:</label></div>
-    
-    <div id="s1" style="display: none;">
+    <div id="s1" style="display: none">
+        <label for="Spielername"> Geben Sie Ihre/n Namen ein:</label>
         <label>Spieler 1: </label>
         <input type="text" id="SN1" value="Spieler 1">      </div>
     <div id="s2" style="display: none;">
@@ -65,12 +63,12 @@
         <input type="text" id="SN5" value="Spieler 5">      </div>
 
     <menu type="toolbar">
-<button type="button" onclick="festlegen AnzahlSpieler()">Spiel beginnen</button>
-<button type="button" onclick="location.href='start.html'">Abbrechen</button>
+<button type="button" onclick="SpielController.eingebenSpielerName()">Spiel beginnen</button>
+<button type="button" onclick="SpielController.abbrechen()">Abbrechen</button>
 </menu>
 </div>
        
-<div id="spiel" style="display: none;">
+<div id="spiel" style="display: none">
   aktuellerSpieler      Restwürfe
    
     <button2 type="button2" onclick="location.href='start.html'">         II  </button2>

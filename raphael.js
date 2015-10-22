@@ -1,7 +1,19 @@
+//Initialisierung//////////////////////////////////////////////////////////
+
+    var SpielController
+    var PunkteController
+
+function init(){
+    SpielController = new SpielController();
+    PunkteController = new PunkteController();
+    alert("done");
+}
+
+
 //Wuerfel/////////////////////////////////////////////////////////////////
 
 function wuerfel (nummer) {
-    this.wuerfelNr = nummmer;
+    this.wuerfelNr = nummer;
     this.wert = 1;
     this.aktiv = true;
     this.getWuerfelNr = function(){
@@ -99,19 +111,19 @@ function Punktezettel (){
     this.summeUnten = 0;
     this.summeGesamt = 0;
     this.punktefelder = [
-        einser = new Einser(),
-        zweier = new Zweier(),
-        dreier = new Dreier(),
-        vierer = new Vierer(),
-        fuenfer = new Fuenfer(),
-        sechser = new Sechser(),
-        dreierpasch = new Dreierpasch(),
-        viererpasch = new Viererpasch(),
-        fullhouse = new FullHouse(),
-        kleineStrasse = new KleineStrasse(),
-        grosseStrasse = new GrosseStrasse(),
-        kniffel = new Kniffel(),
-        chance = new Chance()]
+        this.einser = new Einser(),
+        this.zweier = new Zweier(),
+        this.dreier = new Dreier(),
+        this.vierer = new Vierer(),
+        this.fuenfer = new Fuenfer(),
+        this.sechser = new Sechser(),
+        this.dreierpasch = new Dreierpasch(),
+        this.viererpasch = new Viererpasch(),
+        this.fullhouse = new FullHouse(),
+        this.kleineStrasse = new KleineStrasse(),
+        this.grosseStrasse = new GrosseStrasse(),
+        this.kniffel = new Kniffel(),
+        this.chance = new Chance()]
     
 }
 
@@ -149,55 +161,198 @@ function Einser(){
 }
 Einser.prototype = new Punktefeld();
 
+//Zweier/////////////////////////
+
+function Zweier(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+Zweier.prototype = new Punktefeld();
+
+//dreier/////////////////////////
+
+function Dreier(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+Dreier.prototype = new Punktefeld();
+
+//vierer/////////////////////////
+
+function Vierer(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+Vierer.prototype = new Punktefeld();
+
+//fuenfer/////////////////////////
+
+function Fuenfer(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+Fuenfer.prototype = new Punktefeld();
+
+
+//sechser/////////////////////////
+
+function Sechser(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+Sechser.prototype = new Punktefeld();
+
+//dreierpasch/////////////////////////
+
+function Dreierpasch(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+Dreierpasch.prototype = new Punktefeld();
+
+//viererpasch/////////////////////////
+
+function Viererpasch(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+Viererpasch.prototype = new Punktefeld();
+
+//FullHouse/////////////////////////
+
+function FullHouse(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+FullHouse.prototype = new Punktefeld();
+
+//kleineStrasse/////////////////////////
+
+function KleineStrasse(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+KleineStrasse.prototype = new Punktefeld();
+
+//grosseStrasse/////////////////////////
+
+function GrosseStrasse(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+GrosseStrasse.prototype = new Punktefeld();
+
+//Kniffel/////////////////////////
+
+function Kniffel(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+Kniffel.prototype = new Punktefeld();
+
+//Chance/////////////////////////
+
+function Chance(){
+    this.auswerten = function(wurf){
+        
+    };
+}
+Chance.prototype = new Punktefeld();
 
 
 //SpielController/////////////////////////////////////////////////////////
 
-var SpielController = function() {
+function SpielController() {
     var aktuellerSpieler;
+    spielerAnzahlAlt=0;
     wuerfel1 = new wuerfel(1);
     wuerfel2 = new wuerfel(2);
     wuerfel3 = new wuerfel(3);
     wuerfel4 = new wuerfel(4);
     wuerfel5 = new wuerfel(5);
-    startenSpiel = function(){
-        document.getElementById("start").style="display:none";
-        document.getElementById("einstellungen").style="display:block";
-        //view einstellungen
+    this.startenSpiel = function(){
+        document.getElementById("start").style.display="none";
+        document.getElementById("einstellungen").style.display="block";
+        
     };
-    spielPausieren = function(){
-        //view Start
+    this.abbrechen = function(){
+        document.getElementById("start").style.display="block";
+        document.getElementById("einstellungen").style.display="none";
+        init();
     };
-    spielFortsetzen = function(){
-        //view Spiel
+    this.spielPausieren = function(){
+        document.getElementById("start").style.display="block";
+        document.getElementById("spiel").style.display="none";
     };
-    festlegenSpielerAnzahl = function(anzahl){
+    this.spielFortsetzen = function(){
+        document.getElementById("start").style.display="none";
+        document.getElementById("spiel").style.display="block";
+    };
+    this.festlegenSpielerAnzahl = function(anzahl){
         spielerAnzahl = anzahl;
-        for(var i = 0; i< anzahl; i++){
+        
+        
+        if(spielerAnzahl >= spielerAnzahlAlt){
+            for(var i = 0; i< spielerAnzahl; i++){
               if(i===0){
               var spieler1 = new spieler("Spieler1",1);
-              document.getElementById("s1").style="display:block";
+              document.getElementById("s1").style.display="block";
               }
               if(i===1){
               var spieler2 = new spieler("Spieler2",2);
-              document.getElementById("s2").style="display:block";
+              document.getElementById("s2").style.display="block";
               }
               if(i===2){
               var spieler3 = new spieler("Spieler3",3);
-              document.getElementById("s3").style="display:block";
+              document.getElementById("s3").style.display="block";
               }
               if(i===3){
               var spieler4 = new spieler("Spieler4",4);
-              document.getElementById("s4").style="display:block";
+              document.getElementById("s4").style.display="block";
               }
               if(i===4){
               var spieler5 = new spieler("Spieler5",5);
-              document.getElementById("s5").style="display:block";
+              document.getElementById("s5").style.display="block";
               }
-            
+            spielerAnzahlAlt = spielerAnzahl;
+            }    
+        }else if(spielerAnzahl<spielerAnzahlAlt){
+
+            for(var i = spielerAnzahlAlt; i>spielerAnzahl; i--){
+              
+              if(i===2){
+              var spieler2 = undefined;
+              document.getElementById("s2").style.display="none";
+              }
+              else if(i===3){
+              var spieler3 = undefined;
+              document.getElementById("s3").style.display="none";
+              }
+              else if(i===4){
+              var spieler4 = undefined;
+              document.getElementById("s4").style.display="none";
+              }
+              else if(i===5){
+              var spieler5 = undefined;
+              document.getElementById("s5").style.display="none";
+              }
+            }
+            spielerAnzahlAlt = spielerAnzahl;
         }
+        
     };
-    eingebenSpielerName = function(){
+    this.eingebenSpielerName = function(){
         spieler1.setName(document.getElementById("NameSpieler1").value);
         spieler2.name = document.getElementById("NameSpieler2").value;
         spieler3.name = document.getElementById("NameSpieler3").value;
@@ -206,7 +361,7 @@ var SpielController = function() {
         
         beginneZug();
     };
-    auswaehlenSpieler = function(){
+    this.auswaehlenSpieler = function(){
           if(aktuellerSpieler == undefined){
               aktuellerSpieler=spieler1;
           }
@@ -227,12 +382,12 @@ var SpielController = function() {
               }
           }
     };
-    beginneZug = function(){
+    this.beginneZug = function(){
         aktuellerSpieler.offeneWuerfe = 3;
         auswaehlenSpieler();
         //öffen View Spiel
     };
-    wuerfel = function(){
+    this.wuerfel = function(){
         if(würfel1.aktiv){
             wuerfel1.berechneWerte();
         }
@@ -249,10 +404,10 @@ var SpielController = function() {
             wuerfel5.berechneWerte();
         }
     };
-    beendenWurf = function(){
+    this.beendenWurf = function(){
         aktuellerSpieler.offeneWuerfe = 0; 
     };
-    auwaehlenPunktefeld = function(id){
+    this.auwaehlenPunktefeld = function(id){
         var gewaehltesPunktefeld = document.getElementById(id);
         
         for(var i = 0; i < aktuellerSpieler.punktezettel.punktefelder.length;i++)
@@ -264,7 +419,7 @@ var SpielController = function() {
         }
  
     };
-    berechnePosition = function(){
+    this.berechnePosition = function(){
         
         var ranking = []
         
@@ -292,27 +447,27 @@ var SpielController = function() {
 
 //PunkteController////////////////////////////////////////////////////////
 
- var PunkteController = function(){
-     berechneSummeOben = function(){
+function PunkteController() {
+     this.berechneSummeOben = function(){
          
      };
-     berechneSummeUnten = function(){
+     this.berechneSummeUnten = function(){
          
      };
-     berechneSummeGesammt = function(){
+     this.berechneSummeGesammt = function(){
          var summeGesamt = PunkteController.berechneSummeOben() + PunkteController.berechneSummeUnten();
          return summeGesamt;
      };
-     pruefeWuerfel = function(){
+     this.pruefeWuerfel = function(){
          
      };
-     berechnePunktefeld = function(){
+     this.berechnePunktefeld = function(){
          
      };
-     eintragenPunktefeld = function(){
+     this.eintragenPunktefeld = function(){
          
      };
-     auswertenWuefelWerte = function(){
+     this.auswertenWuefelWerte = function(){
          
          var wuerfelWerte = [0,0,0,0,0,0];
          

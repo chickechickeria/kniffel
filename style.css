@@ -68,13 +68,13 @@ body {
 
 .y img {
 -webkit-transform:
-rotateY(50deg);
+rotateY(3deg);
 -moz-transform:
-rotateY(50deg);
+rotateY(3deg);
 -o-transform:
-rotateY(50deg);
--ms-transform: rotateY(50deg);
-transform: rotateY(20deg);
+rotateY(3deg);
+-ms-transform: rotateY(3deg);
+transform: rotateY(3deg);
     border-radius: 50px;
 }
 
