@@ -17,12 +17,14 @@ button2 {
     background: #e3e3e3;
     color: #000000;
     font-family: fantasy;
+    font-style: normal;
     font-size: 30px;
     font-style: normal;
-    height: 5000px;
+    height: 5px;
     width: 40px;
     margin-left: 100px;
-    transition: all 0.3s ease 0s;
+    
+    
     border-radius: 10px;
 }
 
@@ -41,13 +43,25 @@ box-shadow: inset 0 0 0 4px #b2ffff;
     color:red;
 }
 
+
+#1 {
+    background: #e3e3e4;
+    color: #000000;
+    height: 10px;
+    width: 300px; 
+     line-height: 40px;
+}
+
+button3:hover {
+  background: #66FFF0;
+}
+
 body {
     background-color: #0000cd;
     text-align: center;
     width: auto;
     font-size: 20px;
-    min-width: 320px;
-    max-width: 480px;
+
     font-family: fantasy;
 
 }
@@ -129,9 +143,10 @@ table {
     empty-cells: show;
     border: 1px solid ;
     width:  auto;
-    background: #e3e3e3
+    background: #e3e3e3;
 }
 td {
-    width: 300px;
+    width: 112;
     border: 1px solid ;
+    
 }
