@@ -1,1 +1,1 @@
-# kniffel
+# Digitale Umsetzung des Spieleklassikers Kniffel
