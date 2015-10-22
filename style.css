@@ -82,6 +82,28 @@ h1 {
   justify-content: flex-end;
 }
 
+
+h2 {
+	margin:0;
+	padding:0;
+	color:white;
+  justify-content: flex-end;
+}
+
+
+h5 {
+	margin:0;
+	padding:0;
+	color:white;
+  justify-content: flex-end;
+}
+
+
+p {
+    color:white;
+}
+
+
 lable {
     font-weight: bold;
 display: block;
