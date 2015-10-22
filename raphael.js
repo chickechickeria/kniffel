@@ -99,19 +99,19 @@ function Punktezettel (){
     this.summeUnten = 0;
     this.summeGesamt = 0;
     this.punktefelder = [
-        var einser = new Einser();
-        var zweier = new Zweier();
-        var dreier = new Dreier();
-        var vierer = new Vierer();
-        var fuenfer = new Fuenfer();
-        var sechser = new Sechser();
-        var dreierpasch = new Dreierpasch();
-        var viererpasch = new Viererpasch();
-        var fullhouse = new FullHouse();
-        var kleineStrasse = new KleineStrasse();
-        var grosseStrasse = new GrosseStrasse();
-        var kniffel = new Kniffel();
-        var chance = new Chance();]
+        einser = new Einser(),
+        zweier = new Zweier(),
+        dreier = new Dreier(),
+        vierer = new Vierer(),
+        fuenfer = new Fuenfer(),
+        sechser = new Sechser(),
+        dreierpasch = new Dreierpasch(),
+        viererpasch = new Viererpasch(),
+        fullhouse = new FullHouse(),
+        kleineStrasse = new KleineStrasse(),
+        grosseStrasse = new GrosseStrasse(),
+        kniffel = new Kniffel(),
+        chance = new Chance()]
     
 }
 
@@ -135,8 +135,7 @@ this.isBelegt = function(){
 
 //Einser/////////////////////////////////////////////////////////////
 
-function Einser(){}
-Einser.prototype = new Punktefeld();
+function Einser(){
     this.auswerten = function(wurf){
         if(wurf[0] === 0){
             this.setPunkte(0);
@@ -146,8 +145,9 @@ Einser.prototype = new Punktefeld();
             this.punkte = wurf[0] * 1;
             this.setBelegt(true);
         }
-    }
+    };
 }
+Einser.prototype = new Punktefeld();
 
 
 
@@ -259,8 +259,7 @@ var SpielController = function() {
         {
             if(i === id)
             {
-                aktuellerSpieler.punktezettel.punktefelder[i].
-                aktuellerSpieler.punktezettel.punktefelder[i].auswerten;
+   aktuellerSpieler.punktezettel.punktefelder[i].auswerten(PunkteController.auswertenWuerfelWerte());
             }
         }
  
@@ -337,5 +336,7 @@ var SpielController = function() {
                  wuerfelWerte[i-1]++;
              }
          }
+         
+         return wuerfelWerte;
      };
  }
