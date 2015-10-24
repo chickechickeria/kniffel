@@ -281,6 +281,17 @@ function SpielController() {
     wuerfel3 = new wuerfel(3);
     wuerfel4 = new wuerfel(4);
     wuerfel5 = new wuerfel(5);
+    
+    this.oeffneAnleitung = function(){
+    document.getElementById("start").style.display="none";
+    document.getElementById("anleitung").style.display="block"
+    };
+    
+    this.schließeAnleitung = function(){
+    document.getElementById("anleitung").style.display="none";
+    document.getElementById("start").style.display="block";
+    };
+    
     this.startenSpiel = function(){
         document.getElementById("start").style.display="none";
         document.getElementById("einstellungen").style.display="block";
