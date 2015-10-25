@@ -306,27 +306,28 @@ function SpielController() {
         if(spielerAnzahl >= spielerAnzahlAlt){
             for(var i = 0; i< spielerAnzahl; i++){
               if(i===0){
-              var spieler1 = new spieler("Spieler1",1);
+               spieler1 = new spieler("Spieler1",1);
               document.getElementById("s1").style.display="block";
               }
               if(i===1){
-              var spieler2 = new spieler("Spieler2",2);
+               spieler2 = new spieler("Spieler2",2);
               document.getElementById("s2").style.display="block";
               }
               if(i===2){
-              var spieler3 = new spieler("Spieler3",3);
+              spieler3 = new spieler("Spieler3",3);
               document.getElementById("s3").style.display="block";
               }
               if(i===3){
-              var spieler4 = new spieler("Spieler4",4);
+              spieler4 = new spieler("Spieler4",4);
               document.getElementById("s4").style.display="block";
               }
               if(i===4){
-              var spieler5 = new spieler("Spieler5",5);
+              spieler5 = new spieler("Spieler5",5);
               document.getElementById("s5").style.display="block";
               }
+            }
             spielerAnzahlAlt = spielerAnzahl;
-            }    
+               
         }else if(spielerAnzahl<spielerAnzahlAlt){
 
             for(var i = spielerAnzahlAlt; i>spielerAnzahl; i--){
@@ -353,11 +354,11 @@ function SpielController() {
         
     };
     this.eingebenSpielerName = function(){
-        spieler1.setName(document.getElementById("NameSpieler1").value);
-        spieler2.name = document.getElementById("NameSpieler2").value;
-        spieler3.name = document.getElementById("NameSpieler3").value;
-        spieler4.name = document.getElementById("NameSpieler4").value;
-        spieler5.name = document.getElementById("NameSpieler5").value;
+        spieler1.setName(document.getElementById("SN1").value);
+        spieler2.setName(document.getElementById("SN2").value);
+        spieler3.setName(document.getElementById("SN3").value);
+        spieler4.setName(document.getElementById("SN4").value);
+        spieler5.setName(document.getElementById("SN5").value);
         
         beginneZug();
     };
@@ -383,8 +384,9 @@ function SpielController() {
           }
     };
     this.beginneZug = function(){
-        aktuellerSpieler.offeneWuerfe = 3;
         auswaehlenSpieler();
+        aktuellerSpieler.offeneWuerfe = 3;
+        
         //öffen View Spiel
     };
     this.wuerfel = function(){
