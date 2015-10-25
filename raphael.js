@@ -1,7 +1,12 @@
 //Initialisierung//////////////////////////////////////////////////////////
 
-    var SpielController
-    var PunkteController
+    var SpielController;
+    var PunkteController;
+    var wuerfel1;
+    var wuerfel2;
+    var wuerfel3;
+    var wuerfel4;
+    var wuerfel5;
 
 function init(){
     SpielController = new SpielController();
