@@ -401,19 +401,19 @@ function SpielController() {
         //öffen View Spiel
     };
     this.wuerfel = function(){
-        if(würfel1.aktiv){
+        if(wuerfel1.aktiv){
             wuerfel1.berechneWerte();
         }
-        if(würfel2.aktiv){
+        if(wuerfel2.aktiv){
             wuerfel2.berechneWerte();
         }
-        if(würfel3.aktiv){
+        if(wuerfel3.aktiv){
             wuerfel3.berechneWerte();
         }
-        if(würfel4.aktiv){
+        if(wuerfel4.aktiv){
             wuerfel4.berechneWerte();
         }
-        if(würfel5.aktiv){
+        if(wuerfel5.aktiv){
             wuerfel5.berechneWerte();
         }
     };
