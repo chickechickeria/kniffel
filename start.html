@@ -1,4 +1,5 @@
 <html>
+    
 <head>
     <meta charset="utf-8"/>
     <!--damit mobile Anwendungen das öffnen können-->
@@ -7,45 +8,56 @@
     <link type="text/css" rel="stylesheet" media="screen" href="style.css" />
     <script type="text/javascript" src="raphael.js"></script>
     
-<title>Kniffel</title>
+    <title>Kniffel</title>
+            
+</head> 
+    
+    
+    
+<body onload="init()">
         
-    <h1>Kniffel</h1>
-    
-  </head> 
-    
-    <body onload="init()">
-<div id="start" style="display: block">
+        
+    <div id="start" style="display: block">
+        <h1>Kniffel</h1>
 
-    
+
         <!--<img class ="pic" src="/bilder/kniffel.png" height="200px" width="300px" border="5px"  alt="kniffel">-->
-        
-   
+
+
         <div class="y"> <img src="/bilder/kniffel.png" height="200px" width="300px" border="5px" alt="kniffel"/></div>
 
-     
-                    <menu type="toolbar">
-<button type="button" onclick="SpielController.startenSpiel()">Neues Spiel</button>
-<button type="button" onclick="SpielController.spielFortsetzen()">Spiel fortsetzen</button>
-<button type="button" onclick="SpielController.oeffneAnleitung()">Anleitung</button>
-</menu>
-</div>
-        
-<div id="einstellungen" style="display: none">
-    <div><label>Spieleranzahl:</label>
-    <!--html5 combobox-->
 
-    <input type="text" list=browsers onchange="SpielController.festlegenSpielerAnzahl(this.value)">
-<datalist id="browsers" >
-    <option id="S1"> 1 </option>
-    <option id="S2"> 2 </option>
-    <option id="S3"> 3 </option>
-    <option id="S4"> 4 </option>
-    <option id="S5"> 5 </option>   
-</datalist></div>
+        <menu type="toolbar">
+        <button type="button" onclick="SpielController.startenSpiel()">Neues Spiel</button>
+        <button type="button" onclick="SpielController.spielFortsetzen()">Spiel fortsetzen</button>
+        <button type="button" onclick="SpielController.oeffneAnleitung()">Anleitung</button>
+        </menu>
+    </div>
+        
+        
+        
+    <div id="einstellungen" style="display: none">
+        <h1>Kniffel</h1>
+
+        <div><label>Spieleranzahl:</label>
+        <!--html5 combobox-->
+
+        <input type="text" list=browsers onchange="SpielController.festlegenSpielerAnzahl(this.value)">
+        <datalist id="browsers" >
+            <option id="S1"> 1 </option>
+            <option id="S2"> 2 </option>
+            <option id="S3"> 3 </option>
+            <option id="S4"> 4 </option>
+            <option id="S5"> 5 </option>   
+        </datalist>
+    </div>
     
     <br>
+        
+        
     
     <div id="s1" style="display: none">
+<<<<<<< HEAD
         <label for="Spielername"> Geben Sie Ihre/n Namen ein:</label>
         <p></p>
         <label>Spieler 1: </label>
@@ -68,86 +80,188 @@
 <button type="button" onclick="SpielController.abbrechen()">Abbrechen</button>
 </menu>
 </div>
+=======
+            <label for="Spielername"> Geben Sie Ihre/n Namen ein:</label>
+            <label>Spieler 1: </label>
+            <input type="text" id="SN1" value="Spieler 1">      </div>
+        <div id="s2" style="display: none;">
+            <label>Spieler 2: </label>
+            <input type="text" id="SN2" value="Spieler 2">      </div>
+        <div id="s3" style="display: none;">
+            <label>Spieler 3: </label>
+            <input type="text" id="SN3" value="Spieler 3">      </div>
+        <div id="s4" style="display: none;">
+            <label>Spieler 4: </label>
+            <input type="text" id="SN2" value="Spieler 4">      </div>
+        <div id="s5" style="display: none;">
+            <label>Spieler 5: </label>
+            <input type="text" id="SN5" value="Spieler 5">      </div>
+
+        <menu type="toolbar">
+            <button type="button" onclick="SpielController.eingebenSpielerName()">Spiel beginnen</button>
+            <button type="button" onclick="SpielController.abbrechen()">Abbrechen</button>
+        </menu>
+    </div>
+>>>>>>> origin/master
        
-<div id="spiel" style="display: none">
-  aktuellerSpieler      Restwürfe
-   
-    <button2 type="button2" onclick="location.href='start.html'">         II  </button2>
-    
+        
+        
+    <div id="spiel" style="display: none">
+        <h1>Kniffel</h1>
 
-     <div id="würfelfeld" style="display:none;"><img src=/bilder/Einser.png height="50px" width="50px" id="w1" alt="würfel1"/>
-     <img src=/bilder/Zweier.png height="50px" width="50px" id="w2" alt="würfel2"/>
-     <img src=/bilder/Dreier.png height="50px" width="50px" id="wv" alt="würfel3"/>
-     <img src=/bilder/Vierer.png height="50px" width="50px" id="w4" alt="würfel4"/>
-     <img src=/bilder/Fuenfer.png height="50px" width="50px" alt="würfel5"/></div>
+        aktuellerSpieler      Restwürfe
+
+        <button2 type="button2" onclick="location.href='start.html'">         II  </button2>
+
+
+        <div id="würfelfeld" style="display:none;"><img src=/bilder/Einser.png height="50px" width="50px" id="w1" alt="würfel1"/>
+            <img src=/bilder/Zweier.png height="50px" width="50px" id="w2" alt="würfel2"/>
+            <img src=/bilder/Dreier.png height="50px" width="50px" id="wv" alt="würfel3"/>
+            <img src=/bilder/Vierer.png height="50px" width="50px" id="w4" alt="würfel4"/>
+            <img src=/bilder/Fuenfer.png height="50px" width="50px" alt="würfel5"/></div>
+
+
+
+            <menu type="toolbar">
+                <button type="button" onclick="wuerfeln()">Würfeln</button>
+                <button type="button" onclick="beendenWurf()">Wurf beenden</button>
+            </menu>
+
+            <table>
+                 <tr>
+                 <td>1er</td>
+                 <td><button3 type="button" id="1" onclick=function()>juk</button3></td>  
+                 <td>Dreierpasch</td>
+                 <td><button type="button" id="1" onclick=function()></button3></td>     
+                 </tr>
+                 <tr>
+                 <td>2er</td>
+                 <td><button3 type="button" id="2" onclick=function()></button3></td></td>  
+                 <td>Viererpasch</td>
+                 <td></td>     
+                 </tr>
+                 <tr>
+                 <td>3er</td>
+                 <td></td>  
+                 <td>Full-House</td>
+                 <td></td>     
+                 </tr>
+                 <tr>
+                 <td>4er</td>
+                 <td></td>  
+                 <td>kleine Straße</td>
+                 <td></td>     
+                 </tr>
+                 <tr>
+                 <td>5er</td>
+                 <td></td>  
+                 <td>große Straße</td>
+                 <td></td>     
+                 </tr>
+                 <tr>
+                 <td>6er</td>
+                 <td></td>  
+                 <td>Kniffel</td>
+                 <td></td>     
+                 </tr>
+                 <tr>
+                 <td>Bonus, wenn >63</td>
+                 <td></td>  
+                 <td>Chance</td>
+                 <td></td>     
+                 </tr>
+                 <tr>
+                 <td>Punkte links</td>
+                 <td></td>  
+                 <td>Punnkte rechts</td>
+                 <td></td>     
+                 </tr>
+            </table>
+
+
+
+            <br>        
+            Gesamtpunkte   
+        </div>
+
 
     
-    
-    <menu type="toolbar">
-<button type="button" onclick="wuerfeln()">Würfeln</button>
-<button type="button" onclick="beendenWurf()">Wurf beenden</button>
-</menu>
-    
- <table>
-     <tr>
-     <td>1er</td>
-     <td><button3 type="button" id="1" onclick=function()>juk</button3></td>  
-     <td>Dreierpasch</td>
-     <td><button type="button" id="1" onclick=function()></button3></td>     
-     </tr>
-     <tr>
-     <td>2er</td>
-     <td><button3 type="button" id="2" onclick=function()></button3></td></td>  
-     <td>Viererpasch</td>
-     <td></td>     
-     </tr>
-     <tr>
-     <td>3er</td>
-     <td></td>  
-     <td>Full-House</td>
-     <td></td>     
-     </tr>
-     <tr>
-     <td>4er</td>
-     <td></td>  
-     <td>kleine Straße</td>
-     <td></td>     
-     </tr>
-     <tr>
-     <td>5er</td>
-     <td></td>  
-     <td>große Straße</td>
-     <td></td>     
-     </tr>
-     <tr>
-     <td>6er</td>
-     <td></td>  
-     <td>Kniffel</td>
-     <td></td>     
-     </tr>
-     <tr>
-     <td>Bonus, wenn >63</td>
-     <td></td>  
-     <td>Chance</td>
-     <td></td>     
-     </tr>
-     <tr>
-     <td>Punkte links</td>
-     <td></td>  
-     <td>Punnkte rechts</td>
-     <td></td>     
-     </tr>
-</table>
- 
+        <div id="anleitung" style="display: none">
+            
+            <h1>Anleitung zum Kniffeln</h1>
 
-    
-<br>        
-Gesamtpunkte   
-</div>
-    
-<div id="anleitung">
-    
-</div>
+            <br>
+            <br>
+
+            <h2> Ziel</h2>
+            <p> Die höchst mögliche Gesamtpunktezahl erreichen</p>
+
+            <br>
+            <br>
+            <h2> Ablauf</h2>        
+            <p> Spieler würfeln abwechselnd nacheinander mit Ihren 5 Würfeln. Ist ein Spieler mit seinem Wurf an der Reihe kann er
+                maximal drei mal würfeln.</p>
+            <p> Ein Spieler darf nach jedem Wurf bestimmte Würfel auswählen und beiseite legen, falls die Augenzahlen für ihn günstig                   sind. Mit den rechstlichen Würfeln kann er weiter würfeln.  </p>
+            <p> Der Spieler muss in jeder Runde ein vielversprechendes Feld im Kniffelbogen auswählen, um seine entsprechenden Punkte                   einzutragen. Dafür wählt er das betreffende Feld im Bogen aus und bestätigt dies mit "eintragen".</p>
+            <p> Alternativ kann der Spieler jederzeit auf den Eintrag von Punkten verzichten, jedoch muss hier ein aussichtsloses Feld                 ausgewählt und gestrichen werden (0 eintragen).</p>
+
+
+            <br>
+            <br>
+            <h2>Feldtypen</h2>
+
+            <br>
+            <h5>1er, 2er, 3er, 4er, 5er, 6er: </h5>
+            <p>Nur die entsprechenden Zahlen eintragen. <br> 
+               Andere werden verworfen. </p>
+
+            <br>
+            <h5>Pasch:</h5>
+            <p>Gleiche Würfelaugen bei mehreren Würfeln <br>
+                (also entweder Dreierpasch oder Viererpasch, <br>
+                andere verwerfen) </p>
+
+            <br>
+            <h5>Full House</h5>
+            <p>Ein Dreierpasch und ein Zweierpasch <br>
+                (25 Punkte) </p>
+
+            <br>
+            <h5>Kleine Straße</h5>
+            <p>1-2-3-4, 2-3-4-5, 3-4-5-6 <br> 
+                und ein beliebiger anderer Würfel <br>
+                (30 Punkte) </p>
+
+            <br>
+            <h5>Große Straße</h5>
+            <p>1-2-3-4-5 oder 2-3-4-5-6 <br>
+                (40 Punkte) </p>
+
+            <br>
+            <h5>Kniffel</h5>
+            <p>Fünf gleiche Würfel <br>
+                (50 Punkte) </p>
+
+            <br>
+            <h5> Chance</h5>
+            <p>Falls der Wurf nicht das gewünschte Ergebnis liefert kann der Spieler ein einziges mal das Feld Chance für seinen
+                Eintrag wählen. </p>
+
+            <br>
+            <h5> Bonus </h5>
+            <p> Um den Bonus (= 35 Punkte) vom linken Teil anzurechnen benötigt der Spieler 63 Punkte. Diese 63 Punkte kann ein
+                Spieler erhalten, wenn er von jedem Feld (1er, 2er, 3er, 4er, 5er, 6er) mindestens mit drei Würfeln der entsprechende
+                Zahl geworfen hat.
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <button type="button" onclick="SpielController.schließeAnleitung()">zurück zum Startbildschirm</button>
+
+        </div>
     
 </body>
+
 </html>
