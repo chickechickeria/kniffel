@@ -101,14 +101,17 @@ Sechser.prototype = new Punktefeld();
 
 function Dreierpasch(){
     this.auswerten = function(wurf){
-        this.setPunkte(0);
-        this.setBelegt(true);
+        var erfuellt = false;
+
         for(var i = 0; i< spielerAnzahl; i++){
             if (wurf[i] >= 3){
                 this.setPunkte(wurf[0] * 1 + wurf[1] * 2 + wurf[2] * 3 + wurf[3] * 4 + wurf[4] * 5 + wurf[5] * 6);
-            }
+                erfuellt = true;
+            }   
         }
-
+        if (erfuellt == false){
+            this.setPunkte(0);
+        }
     }
 }
 Dreierpasch.prototype = new Punktefeld();
@@ -117,14 +120,17 @@ Dreierpasch.prototype = new Punktefeld();
 
 function Viererpasch(){
     this.auswerten = function(wurf){
-        this.setPunkte(0);
-        this.setBelegt(true);
+        var erfuellt = false;
+
         for(var i = 0; i< spielerAnzahl; i++){
             if (wurf[i] >= 4){
                 this.setPunkte(wurf[0] * 1 + wurf[1] * 2 + wurf[2] * 3 + wurf[3] * 4 + wurf[4] * 5 + wurf[5] * 6);
-            }
+                erfuellt = true;
+            }   
         }
-
+        if (erfuellt == false){
+            this.setPunkte(0);
+        }
     }
 }
 Viererpasch.prototype = new Punktefeld();
@@ -133,19 +139,23 @@ Viererpasch.prototype = new Punktefeld();
 
 function FullHouse(){
     this.auswerten = function(wurf){
-        this.setPunkte(0);
-        this.setBelegt(true);       
+        var erfuellt = false;
+      
         for(var i = 0; i< spielerAnzahl; i++){
             if (wurf[i] = 2){
                 for(var j = 0; j< spielerAnzahl; j++){
                     if (wurf[j] = 3){
                         this.setPunkte(wurf[0] * 1 + wurf[1] * 2 + wurf[2] * 3 + wurf[3] * 4 + wurf[4] * 5 + wurf[5] * 6);
                         this.setBelegt(true);
+                        erfuellt = true;
+                        break;
                     }   
                 }   
-
             }
         }
+        if (erfuellt == false){
+            this.setPunkte(0);
+        }        
     }
 }
 FullHouse.prototype = new Punktefeld();
@@ -154,20 +164,26 @@ FullHouse.prototype = new Punktefeld();
 
 function KleineStrasse(){
     this.auswerten = function(wurf){
-        this.setPunkte(0);
-        this.setBelegt(true);
+        var erfuellt = false;
+        
         for(var i = 0; i< spielerAnzahl; i++){
             if (wurf[0] >= 1) && (wurf[1] >= 1) && (wurf[2] >= 1) && (wurf[3] >= 1){
                 this.setPunkte(30);
+                erfuellt = true;
             }
             if (wurf[1] >= 1) && (wurf[2] >= 1) && (wurf[3] >= 1) && (wurf[4] >= 1){
                 this.setPunkte(30);
+                erfuellt = true;
             }
             if (wurf[2] >= 1) && (wurf[3] >= 1) && (wurf[4] >= 1) && (wurf[5] >= 1){
                 this.setPunkte(30);
-            }
-            
+                erfuellt = true;
+            }       
         }
+        
+        if (erfuellt == false){
+        this.setPunkte(0);
+        }        
 
     }
 }
@@ -177,16 +193,21 @@ KleineStrasse.prototype = new Punktefeld();
 
 function GrosseStrasse(){
     this.auswerten = function(wurf){
-        this.setPunkte(0);
-        this.setBelegt(true);
+        erfuellt = false;
+        
         for(var i = 0; i< spielerAnzahl; i++){
             if (wurf[0] >= 1) && (wurf[1] >= 1) && (wurf[2] >= 1) && (wurf[3] >= 1) && (wurf[4] >= 1){
                 this.setPunkte(30);
+                erfuellt = true;
             }
             if (wurf[1] >= 1) && (wurf[2] >= 1) && (wurf[3] >= 1) && (wurf[4] >= 1) && (wurf[5] >= 1){
                 this.setPunkte(30);
+                erfuellt = true;
             }
             
+        }
+         if (erfuellt == false){
+         this.setPunkte(0);
         }
 
     }
@@ -197,13 +218,15 @@ GrosseStrasse.prototype = new Punktefeld();
 
 function Kniffel(){
     this.auswerten = function(wurf){
-        this.setPunkte(0);
-        this.setBelegt(true);
+        var erfuellt = false;
         for(var i = 0; i< spielerAnzahl; i++){
             if (wurf[i] = 5){
                 this.setPunkte(50);
             }
         }
+        if (erfuellt == false){
+        this.setPunkte(0);
+        }    
 
     }
 }
