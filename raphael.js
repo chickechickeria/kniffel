@@ -372,19 +372,19 @@ function SpielController() {
     this.eingebenSpielerName = function(){
         if(spieler1 != undefined){
         spieler1.setName(document.getElementById("SN1").value);
-        }
+        }else{return false;}
         if(spieler2 != undefined){
         spieler2.setName(document.getElementById("SN2").value);
-        }
+        }else{return false;}
         if(spieler3 != undefined){
         spieler3.setName(document.getElementById("SN3").value);
-        }
+        }else{return false;}
         if(spieler4 != undefined){
         spieler4.setName(document.getElementById("SN4").value);
-        }
+        }else{return false;}
         if(spieler5 != undefined){
         spieler5.setName(document.getElementById("SN5").value);
-        }
+        }else{return false;}
         
         beginneZug();
     };
