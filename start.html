@@ -86,7 +86,7 @@
 
         aktuellerSpieler      Restwürfe
 
-        <button2 type="button2" onclick="location.href='start.html'">         II  </button2>
+        <button2 type="button2" onclick="SpielController.spielPausieren()">         II  </button2>
 
 
         <div id="wuerfel" ><img src=/bilder/Einser.png height="50px" width="50px" id="w1" alt="würfel1"/>
@@ -98,20 +98,20 @@
 
 
             <menu type="toolbar">
-                <button type="button" onclick="wuerfeln()">Würfeln</button>
-                <button type="button" onclick="beendenWurf()">Wurf beenden</button>
+                <button type="button" onclick="SpielController.wuerfel()">Würfeln</button>
+                <button type="button" onclick="SpielController.beendenWurf()">Wurf beenden</button>
             </menu>
 
-            <table>
+            <table align="center">
                  <tr>
                  <td>1er</td>
-                 <td><button3 type="button" id="1" onclick=function()></button3></td>  
+                 <td><button class="button3" type="button" id="1" onclick=function()></button></td>  
                  <td>Dreierpasch</td>
-                 <td><button3 type="button" id="2" onclick=function()></button3></td>     
+                 <td><button class="button3" type="button" id="7" onclick=function()></button></td>     
                  </tr>
                  <tr>
                  <td>2er</td>
-                 <td><button3 type="button" id="3" onclick=function()></button3></td></td>  
+                 <td><button class="button3" type="button" id="2" onclick=function()></button></td></td>  
                  <td>Viererpasch</td>
                  <td></td>     
                  </tr>
