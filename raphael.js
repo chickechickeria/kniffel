@@ -325,7 +325,7 @@ function SpielController() {
         spielerAnzahl = anzahl;
         
         
-        if(spielerAnzahl >= spielerAnzahlAlt){
+        if(spielerAnzahl > spielerAnzahlAlt){
             for(var i = 1; i< spielerAnzahl; i++){
               if(i===1){
                spieler2 = new spieler("Spieler2",2);   
@@ -349,23 +349,24 @@ function SpielController() {
         }else if(spielerAnzahl<spielerAnzahlAlt){
 
             for(var i = spielerAnzahlAlt; i>spielerAnzahl; i--){
-              
-              if(i===2){
+              switch(i){
+              case 2:
               spieler2 = undefined;
               document.getElementById("s2").style.display="none";
-              }
-              else if(i===3){
+              
+              case 3:
               spieler3 = undefined;
               document.getElementById("s3").style.display="none";
-              }
-              else if(i===4){
+              
+              case 4:
               spieler4 = undefined;
               document.getElementById("s4").style.display="none";
-              }
-              else if(i===5){
+              
+              case 5:
               spieler5 = undefined;
               document.getElementById("s5").style.display="none";
-              }
+              
+            }
             }
             spielerAnzahlAlt = spielerAnzahl;
         }
