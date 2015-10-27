@@ -42,21 +42,20 @@
         <div><label>Spieleranzahl:</label>
         <!--html5 combobox-->
 
-        <input type="text" list=browsers onchange="SpielController.festlegenSpielerAnzahl(this.value)">
-        <datalist id="browsers" >
+        <select id="dropdown" onchange="SpielController.festlegenSpielerAnzahl(this.value)" >
             <option id="S1"> 1 </option>
             <option id="S2"> 2 </option>
             <option id="S3"> 3 </option>
             <option id="S4"> 4 </option>
             <option id="S5"> 5 </option>   
-        </datalist>
+        </select>
     </div>
     
     <br>
         
         
     
-    <div id="s1" style="display: none">
+    <div id="s1" style="display: block">
 
         <label for="Spielername"> Geben Sie Ihre/n Namen ein:</label>
         <p></p>
