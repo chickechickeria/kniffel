@@ -16,6 +16,7 @@
 function init(){
     SpielController = new SpielController();
     PunkteController = new PunkteController();
+    spieler1 = new spieler("Spieler1",1);
     alert("done");
 }
 
@@ -325,13 +326,9 @@ function SpielController() {
         
         
         if(spielerAnzahl >= spielerAnzahlAlt){
-            for(var i = 0; i< spielerAnzahl; i++){
-              if(i===0){
-               spieler1 = new spieler("Spieler1",1);
-              document.getElementById("s1").style.display="block";
-              }
+            for(var i = 1; i< spielerAnzahl; i++){
               if(i===1){
-               spieler2 = new spieler("Spieler2",2);
+               spieler2 = new spieler("Spieler2",2);   
               document.getElementById("s2").style.display="block";
               }
               if(i===2){
@@ -354,19 +351,19 @@ function SpielController() {
             for(var i = spielerAnzahlAlt; i>spielerAnzahl; i--){
               
               if(i===2){
-              var spieler2 = undefined;
+              spieler2 = undefined;
               document.getElementById("s2").style.display="none";
               }
               else if(i===3){
-              var spieler3 = undefined;
+              spieler3 = undefined;
               document.getElementById("s3").style.display="none";
               }
               else if(i===4){
-              var spieler4 = undefined;
+              spieler4 = undefined;
               document.getElementById("s4").style.display="none";
               }
               else if(i===5){
-              var spieler5 = undefined;
+              spieler5 = undefined;
               document.getElementById("s5").style.display="none";
               }
             }
