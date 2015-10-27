@@ -7,6 +7,11 @@
     var wuerfel3;
     var wuerfel4;
     var wuerfel5;
+    var spieler1;
+    var spieler2;
+    var spieler3;
+    var spieler4;
+    var spieler5;
 
 function init(){
     SpielController = new SpielController();
