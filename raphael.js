@@ -404,25 +404,33 @@ function SpielController() {
         
     };
     this.auswaehlenSpieler = function(){
+        var picture;
         switch (aktuellerSpieler.spielerNummer){
             case undefined:
                 aktuellerSpieler=spieler1;
+                picture="bilder/rot.png"
             case 1:
                 aktuellerSpieler = spieler1;
+                picture="bilder/rot.png"
                 break;
             case 2:
                 aktuellerSpieler = spieler2;
+                picture="bilder/gelb.png"
                 break;
             case 3:
                 aktuellerSpieler = spieler3;
+                picture="bilder/gruen.png"
                 break;
             case 4:
                 aktuellerSpieler = spieler4;
+                picture="bilder/orange.png"
                 break;
             case 5:
-                aktuellerSpieler = spieler5;    
+                aktuellerSpieler = spieler5;
+                picture="bilder/lila.png"
               }
         document.getElementById("aktSpieler").value = aktuellerSpieler.getName();
+        document.getElementById("figur").setAttribute("src", picture);
     }
     
     ;

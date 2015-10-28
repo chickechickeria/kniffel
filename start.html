@@ -62,24 +62,24 @@
     <div id="s1" style="display: block">
 
         <label for="Spielername" style="color: #e3e3e3;"> Geben Sie Ihre/n Namen ein:</label>
-        <p></p>
-        <label><img src="bilder/rot.png" height="60px" width="45px"> Spieler 1: </label>
+        <br>
+        <label><img class="figuren" src="bilder/rot.png"> Spieler 1: </label>
         <input type="text" id="SN1" value="Spieler 1">      </div>
     <div id="s2" style="display: none;">
-        <label><img src="bilder/gelb.png" height="60px" width="45px"> Spieler 2: </label>
+        <label><img class="figuren" src="bilder/gelb.png"> Spieler 2: </label>
         <input type="text" id="SN2" value="Spieler 2">      </div>
     <div id="s3" style="display: none;">
-        <label><img src="bilder/gruen.png" height="60px" width="45px"> Spieler 3: </label>
+        <label><img class="figuren" src="bilder/gruen.png"> Spieler 3: </label>
         <input type="text" id="SN3" value="Spieler 3">      </div>
     <div id="s4" style="display: none;">
-        <label><img src="bilder/orange.png" height="60px" width="45px"> Spieler 4: </label>
+        <label><img class="figuren" src="bilder/orange.png"> Spieler 4: </label>
         <input type="text" id="SN4" value="Spieler 4">      </div>
     <div id="s5" style="display: none;">
-        <label><img src="bilder/lila.png" height="60px" width="45px"> Spieler 5: </label>
+        <label><img class="figuren" src="bilder/lila.png" > Spieler 5: </label>
         <input type="text" id="SN5" value="Spieler 5">      </div>
         
     <menu type="toolbar">
-<button type="button" onclick="SpielController.eingebenSpielerName();SpielController.spielStarten();SpielController.auswaehlenSpieler();SpuelController.beginneZug();">Spiel beginnen</button>
+<button type="button" onclick="SpielController.eingebenSpielerName();SpielController.spielStarten();SpielController.auswaehlenSpieler();SpielController.beginneZug();">Spiel beginnen</button>
         <!--onclick="SpielController.eingebenSpielerName();spielStarten();">Spiel beginnen</button>-->
 <button type="button" onclick="SpielController.abbrechen()">Abbrechen</button>
 </menu>
@@ -90,9 +90,14 @@
 
         <table id="infozeileSpiel" align="center">
         <tr>
-            <td class="td2"><input type="text" class="infozeile" id="aktSpieler" value="aktueller Spieler"/></td>
-            <td class="td2"><input type="text" class="infozeile" id="restwuerfe" value="Restw&uuml;rfe"/></td>
-            <td class="td2"><button2 type="button2" onclick="SpielController.spielPausieren()"><img src="bilder/Pause.png" height="30px" width="30px"/></button2></td>
+            <td class="tdAuto"><img class="figuren" id="figur"></td>
+            <td class="td2"><input type="text" class="infozeile" id="aktSpieler" value="aktueller Spieler" disable/></td>
+            <td class="td2">
+            <input type="text" class="infozeile" id="restwuerfe" value="Restw&uuml;rfe" disable/>
+            </td>
+            <td class="tdAuto">
+                <button2 type="button2" onclick="SpielController.spielPausieren()">
+                    <img src="bilder/Pause.png" height="30px" width="30px"/></button2></td>
             </tr>
         </table>
               
