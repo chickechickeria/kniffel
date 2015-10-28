@@ -52,7 +52,7 @@ button {
 }
 
 button2 {
-    background: #e3e3e3;
+    background: darkblue;
     color: #000000;
     font-family: sans-serif;
     font-style: normal;
@@ -62,7 +62,7 @@ button2 {
     width: 40px;
     margin-left: 100px;
     transition: all 0.3s ease 0s;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 button2:hover {
@@ -183,17 +183,16 @@ div {
 }
 
 #infozeileSpiel {
-    border: none ;
+    border: none;
     width:  auto;
-    background: #e3e3e3;
-    border-radius: 20px;
+    background: darkblue;
+
     }
 
 .td2{
     
-    width: 130px;
+    width: 100px;
     border: none ;
-    
 }
 
 table {
@@ -202,8 +201,9 @@ table {
     border: 1px solid ;
     width:  auto;
     background: #e3e3e3;
-    ali
+    
 }
+
 td {
     width: 112px;
     border: 1px solid ;    
@@ -224,7 +224,13 @@ box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.5);
 }
 
 .infozeile {
-    background: #e3e3e3;
+    background: black;
+    color: #e3e3e3;
+    font-family: cursive;
+    padding-left: 10px;
     border: none;
+    border-radius: 20px;
+    height: 25px;
+    width: 150px;
 }
 
