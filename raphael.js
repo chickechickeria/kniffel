@@ -321,6 +321,13 @@ function SpielController() {
         document.getElementById("start").style.display="none";
         document.getElementById("spiel").style.display="block";
     };
+    
+    this.spielStarten = function(){
+        document.getElementById("einstellungen").style.display="none";
+        document.getElementById("spiel").style.display="block";
+    };
+    
+    
     this.festlegenSpielerAnzahl = function(anzahl){
         spielerAnzahl = anzahl;
         
@@ -411,7 +418,9 @@ function SpielController() {
                 aktuellerSpieler = spieler5;
               }
           }
-    };
+    }
+    
+    ;
     this.beginneZug = function(){
         auswaehlenSpieler();
         aktuellerSpieler.offeneWuerfe = 3;
