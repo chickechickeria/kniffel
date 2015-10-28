@@ -17,6 +17,8 @@ function init(){
     SpielController = new SpielController();
     PunkteController = new PunkteController();
     spieler1 = new spieler("Spieler1",1);
+    aktuellerSpieler = new spieler;
+    aktuellerSpieler = spieler1;
     alert("done");
 }
 
@@ -285,7 +287,7 @@ Chance.prototype = new Punktefeld();
 //SpielController/////////////////////////////////////////////////////////
 
 function SpielController() {
-    var aktuellerSpieler;
+   // var aktuellerSpieler;
     spielerAnzahlAlt=0;
     wuerfel1 = new wuerfel(1);
     wuerfel2 = new wuerfel(2);
@@ -293,6 +295,7 @@ function SpielController() {
     wuerfel4 = new wuerfel(4);
     wuerfel5 = new wuerfel(5);
     
+        
     this.oeffneAnleitung = function(){
     document.getElementById("start").style.display="none";
     document.getElementById("anleitung").style.display="block"
@@ -382,6 +385,7 @@ function SpielController() {
     this.eingebenSpielerName = function(){
         if(spieler1 != undefined){
         spieler1.setName(document.getElementById("SN1").value);
+        aktuellerSpieler = spieler1;    
         }else{return false;}
         if(spieler2 != undefined){
         spieler2.setName(document.getElementById("SN2").value);
@@ -396,28 +400,29 @@ function SpielController() {
         spieler5.setName(document.getElementById("SN5").value);
         }else{return false;}
         
-        beginneZug();
+        
+        
     };
     this.auswaehlenSpieler = function(){
-          if(aktuellerSpieler == undefined){
-              aktuellerSpieler=spieler1;
-          }
-          else if(aktuellerSpieler.SpielerNr === spielerAnzahl){
-              aktuellerSpieler = spieler1;
-          }else{
-              if(aktuellerSpieler.SpielerNr === 1){
+        switch (aktuellerSpieler.spielerNummer){
+            case undefined:
+                aktuellerSpieler=spieler1;
+            case 1:
+                aktuellerSpieler = spieler1;
+                break;
+            case 2:
                 aktuellerSpieler = spieler2;
-              }
-              if(aktuellerSpieler.SpielerNr === 2){
+                break;
+            case 3:
                 aktuellerSpieler = spieler3;
-              }
-              if(aktuellerSpieler.SpielerNr === 3){
+                break;
+            case 4:
                 aktuellerSpieler = spieler4;
+                break;
+            case 5:
+                aktuellerSpieler = spieler5;    
               }
-              if(aktuellerSpieler.SpielerNr === 4){
-                aktuellerSpieler = spieler5;
-              }
-          }
+        document.getElementById("aktSpieler").value = aktuellerSpieler.getName();
     }
     
     ;

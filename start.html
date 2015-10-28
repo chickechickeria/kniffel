@@ -79,7 +79,7 @@
         <input type="text" id="SN5" value="Spieler 5">      </div>
         
     <menu type="toolbar">
-<button type="button" onclick="SpielController.eingebenSpielerName();SpielController.spielStarten()">Spiel beginnen</button>
+<button type="button" onclick="SpielController.eingebenSpielerName();SpielController.spielStarten();SpielController.auswaehlenSpieler();SpuelController.beginneZug();">Spiel beginnen</button>
         <!--onclick="SpielController.eingebenSpielerName();spielStarten();">Spiel beginnen</button>-->
 <button type="button" onclick="SpielController.abbrechen()">Abbrechen</button>
 </menu>
@@ -88,9 +88,16 @@
      
     <div id="spiel" style="display: none">
 
-        aktuellerSpieler      Restwürfe
+        <table id="infozeileSpiel" align="center">
+        <tr>
+            <td class="td2"><input type="text" class="infozeile" id="aktSpieler" value="aktueller Spieler"/></td>
+            <td class="td2"><input type="text" class="infozeile" id="restwuerfe" value="Restw&uuml;rfe"/></td>
+            <td class="td2"><button2 type="button2" onclick="SpielController.spielPausieren()">         II  </button2></td>
+            </tr>
+        </table>
+              
 
-        <button2 type="button2" onclick="SpielController.spielPausieren()">         II  </button2>
+        
 
 
         <div id="wuerfel" ><img src=/bilder/Einser.png height="50px" width="50px" id="w1" alt="würfel1"/>

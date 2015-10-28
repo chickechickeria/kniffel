@@ -182,18 +182,33 @@ div {
   padding: 5px;
 }
 
+#infozeileSpiel {
+    border: none ;
+    width:  auto;
+    background: #0000cd;
+    }
+
+.td2{
+    
+    width: 130px;
+    border: none ;
+    
+}
+
 table {
     border-collapse: collapse;
     empty-cells: show;
     border: 1px solid ;
     width:  auto;
     background: #e3e3e3;
+    ali
 }
 td {
     width: 112px;
     border: 1px solid ;    
 }
 
+<<<<<<< HEAD
 footer{
 border-style: solid;
 border-color: #ff0000;
@@ -206,3 +221,9 @@ box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.5);
     margin: 0px 5% 10px 5%;
     text-align: right;
 }
+=======
+.infozeile {
+    background: #0000cd;
+    border: none;
+}
+>>>>>>> origin/master
