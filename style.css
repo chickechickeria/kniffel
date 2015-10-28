@@ -7,8 +7,10 @@ border-radius: 15px 15px 5px 5px;
 -webkit-border-radius: 15px 15px 5px 5px;
 box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.5);
     
-    padding: 1px 1px 10px 40px;
-    margin: 0px 5% 10px 5%;
+padding: 10px 0px 10px 0px;
+margin: 0px 0px 10px 0px;
+min-height: 50px; 
+min-width: 320px;
 }
 
 main{
@@ -23,10 +25,8 @@ border-radius:  5px 5px 5px 5px;
 -moz-border-radius:  5px 5px 5px 5px;
 -webkit-border-radius: 5px 5px 5px 5px;
     
-padding: 25px 0px 25px 40px;
-margin: 0px 5% 10px 5%;
-min-height: 500px; 
-
+padding: 10px 0px 10px 0px;
+margin: 0px 0px 10px 0px;
 }
 
 .wrapper{
@@ -219,7 +219,11 @@ border-radius:  5px 5px 15px 15px;
 -webkit-border-radius: 5px 5px 15px 15px;
 padding: 1px 1px 0px 40px;
 box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.5);
-    margin: 0px 5% 10px 5%;
+    
+padding: 10px 0px 10px 0px;
+margin: 0px 0px 10px 0px;
+min-height: 30px; 
+min-width: 320px;
     text-align: right;
 }
 
