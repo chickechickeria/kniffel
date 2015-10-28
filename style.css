@@ -146,14 +146,33 @@ div {
   padding: 5px;
 }
 
+#infozeileSpiel {
+    border: none ;
+    width:  auto;
+    background: #0000cd;
+    }
+
+.td2{
+    
+    width: 130px;
+    border: none ;
+    
+}
+
 table {
     border-collapse: collapse;
     empty-cells: show;
     border: 1px solid ;
     width:  auto;
     background: #e3e3e3;
+    ali
 }
 td {
     width: 112px;
     border: 1px solid ;    
+}
+
+.infozeile {
+    background: #0000cd;
+    border: none;
 }
