@@ -319,6 +319,7 @@ function SpielController() {
     this.spielPausieren = function(){
         document.getElementById("start").style.display="block";
         document.getElementById("spiel").style.display="none";
+        document.getElementById("fortsetzen").style.display="block";
     };
     this.spielFortsetzen = function(){
         document.getElementById("start").style.display="none";
