@@ -2,7 +2,7 @@ function wuerfeln(){
 var wBild;
 
 for (var i=0; i<6; i++){
-var wErgebnis = Math.round(Math.random() * (6 - 1)) + 1;
+var wErgebnis = Math.floor(Math.random() * 6) + 1;
 
 
 switch (wErgebnis){
