@@ -19,7 +19,7 @@ function init(){
     spieler1 = new spieler("Spieler1",1);
     aktuellerSpieler = new spieler;
     aktuellerSpieler = spieler1;
-    alert("done");
+    //alert("done");
 }
 
 
